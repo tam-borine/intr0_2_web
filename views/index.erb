@@ -3,6 +3,18 @@
   </header>
   <body>
     <img src = http://bit.ly/1eze8aE style="border: 5px dashed red;">
-    <h1> My name is <%=@name%></h1>
+    <% if @name %>
+    <%= "<h1> My name is #{@name} </h1>" %>
+    <% else %>
+    <%= '<form action="/named-cat" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <button type="submit">I am a button</button>
+      </div> </form>' %>
+    <% end %>
+
   </body>
 </html>
