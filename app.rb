@@ -14,3 +14,13 @@ end
 get '/secret' do
   "lalalala"
 end
+
+get '/cat' do
+'<html>
+  <header>
+  </header>
+  <body>
+    <img src = http://bit.ly/1eze8aE style="border: 5px dashed red;">
+  </body>
+</html>'
+end
